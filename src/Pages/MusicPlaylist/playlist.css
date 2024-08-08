@@ -19,9 +19,7 @@
     transition: background-color 0.2s;
 }
 
-.playlist-cont .music-card {
-    max-width: 25%;
-}
+
 
 .delete-playlist-button:hover {
     background-color: #ff1a1a;
