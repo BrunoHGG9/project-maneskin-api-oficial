@@ -1,0 +1,269 @@
+/* Estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #f4f4f4;
+  background-color: #121212;
+  line-height: 1.6;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #e05c47;
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #e05c47;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #e05c47;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #e05c47;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-top: 4px solid #e05c47;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #e05c47;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  text-decoration: underline;
+}
+
+/* Music Card */
+.music-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #121212;
+}
+
+.music-card {
+  flex: 1 1 21%; /* Define a largura dos cards como 21% */
+  max-width: 21%; /* Define a largura máxima dos cards como 21% */
+  height: auto;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.music-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.music-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.music-info {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+}
+.music-info p {
+  margin: 5% 0 !important;
+}
+.music-title {
+  color: white !important;
+}
+.music-info-left,
+.music-info-right {
+  flex: 1;
+  padding: 5%;
+}
+
+.music-title {
+  font-size: 1.5rem;
+  color: #e05c47;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.music-info p {
+  margin: 5px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.music-actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+.play-button,
+.playlist-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #e05c47;
+  transition: color 0.3s;
+  margin: 0 5px;
+}
+
+.play-button:hover,
+.playlist-button:hover {
+  color: #d9534f;
+}
+
+.playlist-button.active {
+  color: #ff5a5f; /* Cor vermelha quando o coração estiver ativo */
+}
+
+/* Music Player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  overflow-x: hidden;
+  opacity: calc(100% - 20%);
+  transition: all 0.3s ease;
+}
+
+.music-player:hover {
+  opacity: initial;
+  transition: all 0.3s ease;
+}
+
+.music-player iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+button {
+  background-color: #e05c47;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #d9534f;
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer-links a,
+.footer-socials a {
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .music-card {
+    flex: 1 1 48%; /* Define a largura dos cards como 48% para telas menores */
+    max-width: 48%; /* Define a largura máxima dos cards como 48% */
+  }
+
+  .music-title {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .music-card {
+    flex: 1 1 100%; /* Define a largura dos cards como 100% para telas menores */
+    max-width: 100%; /* Define a largura máxima dos cards como 100% */
+  }
+
+  .music-title {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

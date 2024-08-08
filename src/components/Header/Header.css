@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  color: #fff;
+  border-bottom: 4px solid #e05c47;
+}
+
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  transition: all 0.3s ease;
+}
+
+svg:hover {
+  transform: scale(1.5);
+}
+
+.play-button svg:hover,
+.play-button:hover {
+  fill: #e05c47;
+}
+
+.header-button svg {
+  fill: #ffffff;
+}
+
+.play-button svg {
+  fill: #ffffff;
+}
+
+.playlist-button:hover {
+  background-color: transparent;
+}
+
+.playlist-button svg {
+  fill: #ffffff;
+}
+
+.playlist-button:hover svg {
+  fill: rgb(19, 224, 0)
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content h1 {
+  margin: 0 !important;
+}
+main>div>h1:first-of-type{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0 2% 0;
+}
+.header-content svg {
+  fill: #e05c47;
+}
+.music-info{display: flex; justify-content: center; align-items: center; }
+.spotify-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header-button {
+  margin-left: 15px;
+}
+
+.play-button,
+.random-button,
+.add-to-playlist-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.play-button:hover,
+.random-button:hover,
+.add-to-playlist-button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.add-to-playlist-button:hover svg:hover {
+  fill: rgb(19, 224, 0)
+}
+
+.random-button:hover svg:hover {
+  fill: rgb(140, 206, 228)
+}
+
+.random-button {
+  /* Adicione estilos específicos para o botão de música aleatória se necessário */
+}
+
+.add-to-playlist-button {
+  transition: color 0.3s ease;
+}
+
+.add-to-playlist-button.active {
+  color: #e0245e;
+  /* Cor vermelha quando ativo */
+}
